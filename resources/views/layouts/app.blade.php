@@ -16,7 +16,7 @@
                         <a href="" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Cuentas</a>
+                        <a href="{{ route('cuentas.index') }}" class="nav-link">Cuentas</a>
                     </li>
                 </ul>
             </div>
