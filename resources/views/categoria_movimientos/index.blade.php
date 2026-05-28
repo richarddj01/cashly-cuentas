@@ -4,15 +4,18 @@
 
 @section('content')
 
-<div class="text-success">
-
-    @foreach($categorias as $categoria)
-    <ul>
-        <li>
-            {{ $categoria->descripcion }}
-        </li>
-    </ul>
-
+<div class="row m-2 justify-content-center">
+    <div class="center">Categorias Registradas</div>
+    @foreach ($categorias as $categoria)
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <strong>{{strtoupper($categoria->descripcion)}}</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
     @endforeach
 </div>
 
