@@ -13,6 +13,11 @@
                     <div class="card-title">
                         <strong>{{strtoupper($categoria->descripcion)}}</strong>
                     </div>
+                    <form action="{{ route('categoria_movimientos.destroy', $categoria->id) }}" method="post" onsubmit="return confirm('¿Seguro que deseas eliminar?')">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
                 </div>
             </div>
         </div>

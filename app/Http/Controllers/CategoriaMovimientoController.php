@@ -30,7 +30,13 @@ class CategoriaMovimientoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'descripcion'=> 'required|string|min:3'
+        ]);
+
+        Categoria_movimiento::create($request->all());
+
+        return back()->with('success','Registro Guardado');
     }
 
     /**
@@ -62,6 +68,8 @@ class CategoriaMovimientoController extends Controller
      */
     public function destroy(categoria_movimiento $categoria_movimiento)
     {
-        //
+        $categoria_movimiento->delete();
+
+        return redirect()->route('categoria_movimientos.index')->with('success','Eliminado correctamente');
     }
 }
