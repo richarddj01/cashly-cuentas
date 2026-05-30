@@ -5,15 +5,17 @@
 @section('content')
 
 <div class="row m-2 justify-content-center">
-    <div class="center">Categorias Registradas</div>
+    <div class="text">Categorias Registradas
+        <a href="{{ route('categoria_movimientos.create') }}" class="btn btn-primary">Crear Nuevo</a>
+    </div>
     @foreach ($categorias as $categoria)
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">
                         <strong>{{strtoupper($categoria->descripcion)}}</strong>
                     </div>
-                    <form action="{{ route('categoria_movimientos.destroy', $categoria->id) }}" method="post" onsubmit="return confirm('¿Seguro que deseas eliminar?')">
+                    <form action="{{ route('categoria_movimientos.destroy', $categoria) }}" method="post" onsubmit="return confirm('¿Seguro que deseas eliminar?')">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Eliminar</button>

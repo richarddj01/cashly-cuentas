@@ -18,6 +18,9 @@
                     <li class="nav-item">
                         <a href="{{ route('cuentas.index') }}" class="nav-link">Cuentas</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route('categoria_movimientos.index') }}" class="nav-link">Categorias</a>
+                    </li>
                 </ul>
             </div>
         </div>

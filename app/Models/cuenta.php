@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class cuenta extends Model
 {
+    protected $fillable = [
+        'descripcion',
+        'saldo_inicial',
+    ];
+
     /**
      * Get all of the comments for the cuenta
      *

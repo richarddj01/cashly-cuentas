@@ -34,9 +34,9 @@ class CategoriaMovimientoController extends Controller
             'descripcion'=> 'required|string|min:3'
         ]);
 
-        Categoria_movimiento::create($request->all());
+        categoria_movimiento::create($request->all());
 
-        return back()->with('success','Registro Guardado');
+        return redirect()->route('categoria_movimientos.index')->with('success','Registro Guardado');
     }
 
     /**
@@ -52,7 +52,7 @@ class CategoriaMovimientoController extends Controller
      */
     public function edit(categoria_movimiento $categoria_movimiento)
     {
-        //
+        return view('categoria_movimientos.edit', compact('categoria_movimiento'));
     }
 
     /**
@@ -60,7 +60,13 @@ class CategoriaMovimientoController extends Controller
      */
     public function update(Request $request, categoria_movimiento $categoria_movimiento)
     {
-        //
+        $request->validate([
+            'descripcion'=> 'required|string|min:3'
+        ]);
+
+        $categoria_movimiento->update($request->all());
+
+        return redirect()->route('categoria_movimientos.index')->with('success','Actualizado correctamente');
     }
 
     /**
