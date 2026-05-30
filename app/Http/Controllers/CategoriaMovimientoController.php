@@ -22,7 +22,7 @@ class CategoriaMovimientoController extends Controller
      */
     public function create()
     {
-        //
+        return view('categoria_movimientos.create');
     }
 
     /**
