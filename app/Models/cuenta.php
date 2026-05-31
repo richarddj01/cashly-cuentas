@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class cuenta extends Model
 {
+    use SoftDeletes;
+
     protected $fillable = [
         'descripcion',
         'saldo_inicial',

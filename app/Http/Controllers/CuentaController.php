@@ -66,7 +66,7 @@ class CuentaController extends Controller
             'saldo_inicial' => 'nullable|numeric',
         ]);
         $cuenta->update($request->all());
-        return redirect()->route('cuentas.update')->with('success','Actualizado con exito');
+        return redirect()->route('cuentas.index')->with('success','Actualizado con exito');
     }
 
     /**

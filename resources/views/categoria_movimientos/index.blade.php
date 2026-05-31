@@ -15,6 +15,7 @@
                     <div class="card-title">
                         <strong>{{strtoupper($categoria->descripcion)}}</strong>
                     </div>
+                    <a href="{{ route('categoria_movimientos.edit', $categoria) }}" class="btn btn-warning">Editar</a>
                     <form action="{{ route('categoria_movimientos.destroy', $categoria) }}" method="post" onsubmit="return confirm('¿Seguro que deseas eliminar?')">
                         @csrf
                         @method('DELETE')

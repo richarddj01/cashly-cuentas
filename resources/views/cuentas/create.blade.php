@@ -12,6 +12,7 @@
                     </div>
                     <div class="card-text">
                         <form action="{{ route('cuentas.store') }}" method="post" class="row g-3">
+                            @csrf
                             <label for="descripcion" class="form-label">Nombre de la cuenta:</label>
                             <input type="text" name="descripcion" id="descripcion" class="form-control is-valid">
                             @error('descripcion')
