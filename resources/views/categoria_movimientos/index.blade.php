@@ -5,7 +5,8 @@
 @section('content')
 
 <div class="row m-2 justify-content-center">
-    <div class="text">Categorias Registradas
+    <div class="text">
+        <strong>Categorias Registradas</strong>
         <a href="{{ route('categoria_movimientos.create') }}" class="btn btn-primary">Crear Nuevo</a>
     </div>
     @foreach ($categorias as $categoria)
