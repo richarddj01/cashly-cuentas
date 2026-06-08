@@ -10,7 +10,7 @@
         <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
             <div class="container-fluid">
 
-                <a class="navbar-brand" href="/">Cashly-cash</a>
+                <a class="navbar-brand" href="/">Logo</a>
 
                 <button
                     class="navbar-toggler"
